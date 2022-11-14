@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+  color: rgb(198, 198, 198);
+}
+
+@layer base {
+  input {
+    @apply w-96 bg-bgColor rounded-2xl focus:outline-none focus:border-none px-4 h-16;
+  }
+
+  button {
+    @apply rounded-lg py-3 px-7 hover:text-4xl hover:animate-pulse duration-500 hover:px-8 hover:py-5;
+  }
+
+  section {
+    @apply bg-eachToDoColor px-10 py-14 rounded-xl max-w-5xl;
+  }
+
+  i {
+    @apply text-5xl hover:animate-pulse hover:text-7xl duration-500 cursor-pointer;
+  }
+}
+
+.fa-trash-can {
+  color: red;
+}
+
+.fa-square-check {
+  color: rgb(47, 116, 92);
+}
